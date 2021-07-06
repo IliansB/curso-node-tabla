@@ -4,7 +4,8 @@ const argv = require('yargs')
         'b', {
         alias: 'base',
         type: 'number',
-        demandOption: true
+        demandOption: true,
+        description: "Número base de multiplicación"
     }
     )
     .option(
@@ -12,7 +13,8 @@ const argv = require('yargs')
         alias: 'listar',
         type: 'boolean',
         demandOption: false,
-        default: false
+        default: false,
+        description: "Lista la tabla por consola"
     },
     )
     .option(
@@ -20,7 +22,8 @@ const argv = require('yargs')
         alias: 'hasta',
         type: 'number',
         demandOption: false,
-        default: 10
+        default: 10,
+        description: "Limite de la multiplicación"
     },
     )
     .check((argv, options) => {
